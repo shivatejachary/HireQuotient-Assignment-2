@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Admin Dashboard</title>
+</head>
+<body>
+  <div class="admin-dashboard">
+    <div class="search-bar">
+      <input type="text" placeholder="Search" id="searchInput">
+      <button class="search-icon" onclick="search()"><i class="fas fa-search"></i></button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- Table rows will be dynamically added here -->
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <button onclick="goToFirstPage()" class="page"><i class="fas fa-angle-double-left"></i></button>
+      <button onclick="prevPage()" class="page"><i class="fas fa-angle-left"></i></button>
+      <span id="currentPage">Page 1</span>
+      <button onclick="nextPage()" class="page"><i class="fas fa-angle-right"></i></button>
+      <button onclick="goToLastPage()" class="page"><i class="fas fa-angle-double-right"></i></button>
+    </div>
+
+    <span class="selected-count">0 row(s) selected</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
